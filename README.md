@@ -1,23 +1,19 @@
-# Fono+ Habla Visible MVP v32
+# Backend Node/Express para Fono+ (scaffold)
 
-Versión preparada para demo online en GitHub Pages, Netlify o Vercel.
+Este backend es un punto de partida para reemplazar el localStorage por API real.
 
-## Cómo subir a GitHub Pages
+## Ejecutar local
+```bash
+npm install
+npm start
+```
 
-1. Crea un repositorio nuevo.
-2. Sube `index.html` a la raíz del repositorio.
-3. En Settings > Pages, selecciona la rama principal y carpeta raíz.
-4. Espera el link HTTPS de GitHub Pages.
+Endpoints principales:
+- POST /api/login
+- GET/POST /api/users
+- GET /api/patients
+- GET /api/dataset
+- POST /api/phoneme-samples
+- PATCH /api/phoneme-samples/:id/label
 
-## Usuarios demo
-
-- Admin: `admin@fonoplus.cl` / `admin123`
-- Terapeuta: `fono@fonoplus.cl` / `fono123`
-- Familia: `familia@fonoplus.cl` / `familia123`
-
-## Notas técnicas
-
-- El micrófono funciona mejor desde HTTPS.
-- Los datos se guardan localmente en el navegador con localStorage.
-- Los audios del MVP no deben usarse como almacenamiento clínico definitivo.
-- Para producción se requiere backend, autenticación real, consentimiento, cifrado y política de datos.
+Para producción falta: variables de entorno, HTTPS, almacenamiento cloud, consentimiento, auditoría y políticas de privacidad.
